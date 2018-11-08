@@ -23,6 +23,8 @@ initLines();
   // console.log(lines);
    console.log(contains(3,"Software Engineering"));
    console.log(contains(3,"Software Engineering").length);
+   console.log(indexesToObjects(lines, contains(2, "category1")));
+   console.log(countDifferent(3));
   // console.log(skills);
   // console.log(categories);
   // console.log(modules);
@@ -64,6 +66,47 @@ function contains(key, value)
      {
          // console.log(i + " false");
      }
+   }
+   return output;
+ }
+
+ function countDifferent(key)
+  {
+    //console.log(key);
+    // console.log(value);
+    var output =  [];
+
+    output.push(lines[0]);
+    //console.log(output);
+    for (var i = 1; i < lines.length; i++)
+    {
+      //console.log(i);
+
+      for (var j = 0; j < output.length; j++)
+      {
+      //console.log(j);
+      if (lines[i].words[key] !== output[j].words[key])
+        {
+        output.push(lines[i]);
+        i++;
+      //  console.log(i + " true");
+        }
+        else
+        {
+        //  console.log(i + " false");
+        }
+      }
+      i++;
+    }
+    return output.length;
+  }
+
+ function indexesToObjects(array, indexes)
+ {
+   var output = [];
+   for (var i = 0; i < indexes.length; i++)
+   {
+     output.push(array[indexes[i]]);
    }
    return output;
  }
