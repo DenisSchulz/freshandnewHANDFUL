@@ -6,6 +6,7 @@ let lines = []; // define global variable with let
 // let studyPrograms = [];
 
 let seperator = ", "; // globally defined; used in other parts
+let circle;
 // let projects = [];
 //
 // let pieces = [];
@@ -19,6 +20,8 @@ text = loadStrings("skills.txt"); //die Textdatei wird eingelesen und in Form ei
 function setup()
 {
 initLines();
+createCanvas(800,800);
+circle = new Pie();
   // console.log(text);
   // console.log(lines);
    // console.log(contains(3,"Software Engineering"));
@@ -44,6 +47,7 @@ function draw()
    strokeWeight(2);
    stroke(255);
    fill(150);
+   circle.draw();
 }
 
 function initLines()
