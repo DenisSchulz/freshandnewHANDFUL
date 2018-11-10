@@ -19,6 +19,7 @@ text = loadStrings("skills.txt"); //die Textdatei wird eingelesen und in Form ei
 
 function setup()
 {
+angleMode(DEGREES);
 initLines();
 createCanvas(800,800);
 circle = new Pie();
