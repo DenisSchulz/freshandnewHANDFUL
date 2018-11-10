@@ -52,10 +52,13 @@ function initLines()
   {
     if (text[i] != "")
     {
-      lines[i] = new Line(i, text[i]);
+      lines.push(new Line(i, text[i]));
+
+      console.log(text[i]);
     }
 
   }
+  console.log(lines);
 }
 
 // sort by studyprogram, return values (e.g. modules) for key ("studyprogram")
