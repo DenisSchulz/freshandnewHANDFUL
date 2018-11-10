@@ -50,7 +50,11 @@ function initLines()
 {
   for (var i = 0; i < text.length; i++) // iterate through lines in text
   {
-    lines[i] = new Line(i, text[i]);
+    if (text[i] != "")
+    {
+      lines[i] = new Line(i, text[i]);
+    }
+
   }
 }
 
