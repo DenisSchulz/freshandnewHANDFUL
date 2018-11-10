@@ -12,7 +12,7 @@ skill, module, category, Software Engineering, project1, project2, project 3
 skill, module, category, Software Engineering, project1, project2, project 3
 skill, module, category, Software Engineering, project1, project2, project 3
 skill, module, category, Software Engineering, project1, project2, project 3
-skill, module, category, Software Engineering, project1, project2, project 3
+
 skill, module, category, Software Engineering, project1, project2, project 3
 skill, module, category, Software Engineering, project1, project2, project 3
 skill, module, category, Software Engineering, project1, project2, project 3
