@@ -27,9 +27,3 @@ function Pie()
 
 
 }
-
-
-// 1.) index rows
-// 2.) in rows, check specifc elements (lines[i])
-// 3.) if element in row !== before seen elements
-// 4.) output.push[j]
