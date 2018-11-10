@@ -160,7 +160,7 @@ function countUnique(key) // arguments: stuff you pass into a function and use i
      // var unique = output.filter((v, i, a) => a.indexOf(v) === i);
    }
    var unique = new Set(output);
-   return unique.length;
+   return unique.size;
 }
 
 function uniqueOutput (key, index) {
