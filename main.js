@@ -159,12 +159,28 @@ function countUnique(key) // arguments: stuff you pass into a function and use i
      // var unique = output.filter( onlyUnique );
      // var unique = output.filter((v, i, a) => a.indexOf(v) === i);
    }
-   var unique = new Set(output); // extract unique items from array output
-   // const iterator = unique.entries();
-
-   return unique.size;
+   var unique = new Set(output);
+   return unique.length;
 }
 
+function uniqueOutput (key, index) {
+  var output =  []; // array we will store results in
+  //console.log(output);
+  for (var i = 0; i < lines.length; i++) // iterate through lines (56 in total) arrays
+  {
+    output.push(lines[i].words[key]); // add all strings to array output
+    // var unique = output.filter( onlyUnique );
+    // var unique = output.filter((v, i, a) => a.indexOf(v) === i);
+  }
+  var unique = new Set(output);
+  var unique_list = [];
+  for (let item of unique){
+    unique_list.push(item);
+  }
+  // const iterator = unique.entries();
+
+  return unique_list[index];
+}
 
 
  function indexesToObjects(array, indexes)
