@@ -7,6 +7,7 @@ let lines = []; // define global variable with let
 
 let seperator = ", "; // globally defined; used in other parts
 let circle;
+let elements = [];
 // let projects = [];
 //
 // let pieces = [];
@@ -23,13 +24,17 @@ angleMode(DEGREES);
 initLines();
 createCanvas(800,800);
 circle = new Pie();
+console.log(containsNested(3, "Software Engineering", 2));
+initElements();
+
+//console.log(lines[2].words.length);
   // console.log(text);
   // console.log(lines);
    // console.log(contains(3,"Software Engineering"));
    // console.log(contains(3,"Software Engineering").length);
    // console.log(indexesToObjects(lines, contains(2, "category1")));
    // console.log(containsNested(3, "Software Engineering", 1));
-   console.log(countUnique(3));
+   //console.log(countUnique(3));
    // console.log(contains1(2));
 
    // console.log(lines[5].words[3]); // call specific line and word in line
@@ -40,15 +45,21 @@ circle = new Pie();
   // console.log(modules);
   // console.log(studyPrograms);
   // console.log(projects);
+
+  // background(100);
+  // strokeWeight(2);
+  // stroke(255);
+  // fill(150);
+  // circle.draw();
 }
 
 function draw()
 {
-   background(100);
-   strokeWeight(2);
-   stroke(255);
-   fill(150);
-   circle.draw();
+   // background(100);
+   // strokeWeight(2);
+   // stroke(255);
+   // fill(150);
+   // circle.draw();
 }
 
 function initLines()
@@ -59,11 +70,26 @@ function initLines()
     {
       lines.push(new Line(i, text[i]));
 
-      console.log(text[i]);
+      //console.log(text[i]);
     }
 
   }
-  console.log(lines);
+//  console.log(lines);
+}
+
+function initElements()
+{
+  console.log("GO");
+  for (var i = 0; i < lines.length; i++)
+  {
+    console.log(i);
+    for (var j = 0; j < lines[i].words.length; j++)
+    {
+      console.log(j);
+      elements.push(new Element(j, i, lines[i].words[j]));
+    }
+  }
+  console.log(elements);
 }
 
 // sort by studyprogram, return values (e.g. modules) for key ("studyprogram")
@@ -83,9 +109,14 @@ function containsNested(key, studyprogram, category)
 
      }
    }
-   return output;
+   unique = new Set(output);
+   return unique.size;
  }
 
+function containsNestedUnique()
+{
+
+}
 
 // return elements (lines[i] that equal a given value)
  function contains(key, value)

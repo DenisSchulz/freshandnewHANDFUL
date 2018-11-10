@@ -14,6 +14,9 @@ function Line(id, line)
 
  this.description = this.words[4];
 
+
+ this.pos;
+
 }
 
 
